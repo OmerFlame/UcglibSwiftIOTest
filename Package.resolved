@@ -1,0 +1,61 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "MadBoards",
+        "repositoryURL": "https://github.com/madmachineio/MadBoards.git",
+        "state": {
+          "branch": null,
+          "revision": "d1bf2c3ef45af02771cb7e47ce25cf75e7e723be",
+          "version": "0.0.4"
+        }
+      },
+      {
+        "package": "MadDisplay",
+        "repositoryURL": "https://github.com/madmachineio/MadDisplay.git",
+        "state": {
+          "branch": null,
+          "revision": "fb6ddb7d9d603080cd167a59ddbdf573f0fdd015",
+          "version": "0.0.7"
+        }
+      },
+      {
+        "package": "MadDrivers",
+        "repositoryURL": "https://github.com/madmachineio/MadDrivers.git",
+        "state": {
+          "branch": null,
+          "revision": "1154cbe921ed57512fa876716a526aa3925bf4ee",
+          "version": "0.0.10"
+        }
+      },
+      {
+        "package": "swift-numerics",
+        "repositoryURL": "https://github.com/apple/swift-numerics",
+        "state": {
+          "branch": null,
+          "revision": "0a5bc04095a675662cf24757cc0640aa2204253b",
+          "version": "1.0.2"
+        }
+      },
+      {
+        "package": "SwiftIO",
+        "repositoryURL": "https://github.com/madmachineio/SwiftIO.git",
+        "state": {
+          "branch": null,
+          "revision": "b9445447b0516303da170cb7cd8c886a5440c092",
+          "version": "0.0.5"
+        }
+      },
+      {
+        "package": "UcglibSwiftIO",
+        "repositoryURL": "https://github.com/OmerFlame/UcglibSwiftIO.git",
+        "state": {
+          "branch": "main",
+          "revision": "03ad3d7fb3bc778be7f9387cf5b7b94cd32af99c",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
