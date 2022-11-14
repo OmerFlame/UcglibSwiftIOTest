@@ -1,7 +1,7 @@
 import SwiftIO
 import UcglibSwiftIO
-import SwiftIOBoard
 import CUcglibSwiftIO
+import MadBoard
 
 extension String {
 	func leftPadding(toLength: Int, withPad character: Character) -> String {
@@ -14,7 +14,7 @@ extension String {
 	}
 }
 
-let spi = SPI(Id.SPI0)
+let spi = SPI(Id.SPI0, speed: 14000000)
 
 var ucg = Ucglib_ST7735_18x128x160_HWSPI(spi: spi, cd: Id.D5, cs: Id.D9, reset: Id.D4)
 
@@ -25,11 +25,13 @@ ucg.clearScreen()
 ucg.setRotate180()
 
 //ucg.setFont(&ucg_font_inr21_mr[0])
-withUnsafePointer(to: ucg_font_inr21_mr) { ptr in
+/*withUnsafePointer(to: ucg_font_inb16_mr) { ptr in
     let rawPtr = UnsafeRawBufferPointer(start: ptr, count: Mirror(reflecting: ptr.pointee).children.count)
     
     ucg.setFont(rawPtr.baseAddress!.assumingMemoryBound(to: UInt8.self))
-}
+}*/
+
+ucg.setFont("JetBrainsMono")
 
 ucg.setColor(r: 255, g: 255, b: 255)
 ucg.setColor(idx: 1, r: 0, g: 0, b: 0)
@@ -75,11 +77,13 @@ while true {
 	
 	let paddedString = String(Variable1).leftPadding(toLength: 3, withPad: " ")
 	
-	withUnsafePointer(to: ucg_font_inb16_mr) { ptr in
+	/*withUnsafePointer(to: ucg_font_inb16_mr) { ptr in
 		let rawPtr = UnsafeRawBufferPointer(start: ptr, count: Mirror(reflecting: ptr.pointee).children.count)
 		
 		ucg.setFont(rawPtr.baseAddress!.assumingMemoryBound(to: UInt8.self))
-	}
+	}*/
+	
+	ucg.setFont("inb16_mr")
 	
 	ucg.setColor(r: 255, g: 255, b: 0)
 	ucg.setColor(idx: 1, r: 0, g: 0, b: 0)
@@ -94,11 +98,11 @@ while true {
 		ucg.print(" ")
 	}
 	
-	withUnsafePointer(to: ucg_font_inb16_mr) { ptr in
+	/*withUnsafePointer(to: ucg_font_inb16_mr) { ptr in
 		let rawPtr = UnsafeRawBufferPointer(start: ptr, count: Mirror(reflecting: ptr.pointee).children.count)
 		
 		ucg.setFont(rawPtr.baseAddress!.assumingMemoryBound(to: UInt8.self))
-	}
+	}*/
 	
 	ucg.setColor(r: 0, g: 255, b: 0)
 	ucg.setColor(idx: 1, r: 0, g: 0, b: 0)
