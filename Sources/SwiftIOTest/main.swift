@@ -31,7 +31,7 @@ ucg.setRotate180()
     ucg.setFont(rawPtr.baseAddress!.assumingMemoryBound(to: UInt8.self))
 }*/
 
-ucg.setFont("JetBrainsMono")
+ucg.setFont("ucg_font_jbmr21_mr")
 
 ucg.setColor(r: 255, g: 255, b: 255)
 ucg.setColor(idx: 1, r: 0, g: 0, b: 0)
@@ -83,7 +83,7 @@ while true {
 		ucg.setFont(rawPtr.baseAddress!.assumingMemoryBound(to: UInt8.self))
 	}*/
 	
-	ucg.setFont("inb16_mr")
+	ucg.setFont("ucg_font_inb16_mr")
 	
 	ucg.setColor(r: 255, g: 255, b: 0)
 	ucg.setColor(idx: 1, r: 0, g: 0, b: 0)
